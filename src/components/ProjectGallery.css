@@ -1,0 +1,119 @@
+.gallery-section {
+  padding: 4rem 0;
+  background: #fff;
+  text-align: center;
+}
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.gallery-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+.gallery-filters {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .gallery-filters {
+    justify-content: center;
+  }
+}
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.filter-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+.filter-item:hover .filter-circle {
+  border-color: #cca848;
+}
+.filter-inner {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+.filter-label {
+  font-size: 0.6875rem;
+  color: #6b7280;
+  margin: 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.gallery-card {
+  border: 1px solid #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.gallery-image {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-card:hover .gallery-image {
+  transform: scale(1.05);
+}
+.gallery-content {
+  padding: 1.5rem;
+}
+.gallery-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0 0 0.5rem 0;
+}
+.gallery-card-desc {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+.gallery-card-link {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #cca848;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+}

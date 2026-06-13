@@ -1,0 +1,122 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Garante que as imagens não transbordam */
+}
+
+/* Contentor das duas imagens de fundo */
+.hero-backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+}
+
+/* Imagem Esquerda (Planta) */
+.hero-bg-left {
+  flex: 1;
+  /* Link de placeholder para a planta arquitetónica - pode alterar depois */
+  background-image: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: left center;
+}
+
+/* Imagem Direita (Casa finalizada) */
+.hero-bg-right {
+  flex: 1;
+  /* Link de placeholder para a casa - pode alterar depois */
+  background-image: url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Gradiente sobreposto para garantir a leitura do texto à esquerda */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* Cria um fundo branco que desvanece suavemente para a direita */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+/* Comportamento em telemóveis (empilha as imagens) */
+@media (max-width: 768px) {
+  .hero-backgrounds {
+    flex-direction: column;
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+  }
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-text-content {
+  max-width: 550px;
+  padding: 2rem 0;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #1f1f1f;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title span {
+  color: #4b5563;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.hero-button {
+  background-color: #cca848;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.hero-button:hover {
+  background-color: #b5953f;
+}
